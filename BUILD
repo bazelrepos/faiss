@@ -18,6 +18,11 @@ cc_import(
   static_library = 'librefblas.a',
 )
 
+cc_import(
+  name = 'libgfortran',
+  static_library = 'libgfortran.so.5',
+)
+
 cc_library(
   name = 'faiss',
   hdrs = glob(['faiss/*.h']) 
@@ -38,8 +43,9 @@ cc_library(
     'liblapack',
     'libcblas',
     'librefblas',
+    'libgfortran',
   ],
   copts = ['-DFINTEGER=int'],
-  linkopts = ['-lpthread', '-lgomp', '-lgfortran'],
+  linkopts = ['-lpthread', '-lgomp'],
   visibility = ["//visibility:public"],
 )
