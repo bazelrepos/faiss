@@ -58,6 +58,6 @@ cc_library(
     #'libz',
   ],
   copts = ['-DFINTEGER=int'],
-  linkopts = ['-lpthread', '-lgomp', '-lgfortran', '-L/usr/lib64'],
+  linkopts = ['-L/usr/lib64', '-lpthread', '-lgomp', '-lgfortran'],
   visibility = ["//visibility:public"],
 )
