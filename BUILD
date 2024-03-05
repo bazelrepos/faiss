@@ -20,7 +20,7 @@ cc_import(
 
 cc_import(
   name = 'libgfortran',
-  static_library = 'libgfortran.so.5',
+  static_library = 'libgfortran.a',
 )
 
 cc_library(
