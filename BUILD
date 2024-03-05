@@ -23,6 +23,11 @@ cc_import(
   shared_library = 'libgfortran.so.5',
 )
 
+cc_import(
+  name = 'libquadmath',
+  shared_library = 'libquadmath.so.0',
+)
+
 cc_library(
   name = 'faiss',
   hdrs = glob(['faiss/*.h']) 
@@ -44,6 +49,7 @@ cc_library(
     'libcblas',
     'librefblas',
     'libgfortran',
+    'libquadmath',
   ],
   copts = ['-DFINTEGER=int'],
   linkopts = ['-lpthread', '-lgomp'],
