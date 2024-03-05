@@ -38,7 +38,6 @@ cc_library(
     'liblapack',
     'libcblas',
     'librefblas',
-    'libgfortran',
   ],
   copts = ['-DFINTEGER=int'],
   linkopts = ['-lpthread', '-lgomp'],
